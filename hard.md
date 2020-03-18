@@ -15,7 +15,7 @@ row_norm <- sqrt(rowSums((P$A)^2))
 P$A <- cbind(P$A, row_norm) 
 var_bounds <- list("indices"=c(3), "lower"=c(0), "upper"=c(1000))  
 
-randomized_lp_solver(P, obj=c(0,0,0,-1), bounds=var_bounds, algo=0)
+randomized_lp_solver(P, obj=c(0,0,0,-1), bounds=var_bounds, algo=1)
 ```  
 **Result:**  
 ```
@@ -23,11 +23,12 @@ $objective_value
 [1] -0.9999
 
 $variables
-[1] 1.891452e-08 1.891452e-08 1.891452e-08 9.999000e-01
+[1] 9.294507e-08 9.294507e-08 9.294507e-08 9.999291e-01
 ```   
 **Therefore**  
-**Center =** (1.891452e-08,  1.891452e-08,  1.891452e-08) and **Radius =** 0.9999.  
+**Center =** (9.294507e-08,  9.294507e-08,  9.294507e-08) and **Radius =** 0.9999.  
 which is very close to the theoretical result:  
 **Center =** (0, 0, 0) and **Radius =** 1.  
 
 ### Difficulties faced
+  -)  
