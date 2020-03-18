@@ -2,7 +2,7 @@
 
 ### I have implemented the Randomized Cutting Plane algorithm for solving LP program in C++
 -> [commit link](https://github.com/vaithak/volume_approximation/commit/bb799d42d1e44049a2848ab4720d9468b9efb090)   
-**Note:** I have implemented the alorithm from scratch but have used some part of previous PR's code for calculating an initial point in a polytope using log barrier method and gradient descent.  
+**Note:** I have implemented the alorithm from scratch but have used some part of previous PR's code and made some modifications for calculating an initial point in a polytope using log barrier method and gradient descent.  
 
 ### R interface along with the documentation
 -> [commit link](https://github.com/vaithak/volume_approximation/commit/03544bc51584d80d24be5427e6e13d52f2061914)  
@@ -16,7 +16,7 @@ row_norm <- sqrt(rowSums((P$A)^2))
 P$A <- cbind(P$A, row_norm) 
 var_bounds <- list("indices"=c(3), "lower"=c(0), "upper"=c(1000))  
 
-randomized_lp_solver(P, obj=c(0,0,0,-1), bounds=var_bounds, algo=1)
+randomized_lp_solver(P, obj=c(0,0,0,-1), bounds=var_bounds, algo=0)
 ```  
 **Result:**  
 ```
