@@ -30,3 +30,13 @@ $variables
 **Center =** (1.891452e-08,  1.891452e-08,  1.891452e-08) and **Radius =** 0.9999.  
 which is very close to the theoretical result:  
 **Center =** (0, 0, 0) and **Radius =** 1.  
+
+### Performance benchmarks
+```
+# P = gen_cube(10,'H')
+
+Unit: milliseconds
+                                  expr         min          lq         mean       median           uq        max  neval
+ find_chebychev_ball_center_lpsolve(P)    1.865637    2.202339     2.438414     2.281963     2.578785   14.41695    100
+ find_chebychev_ball_center_volesti(P) 1948.289957 2132.473352  2301.396565  2261.183982  2417.464725 3321.46584    100    
+```  
